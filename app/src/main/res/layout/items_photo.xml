@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivPhoto"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:minHeight="@dimen/holder_min_height"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test"
+            android:id="@+id/tvCaption"
+            android:textSize="@dimen/holder_text_size"
+            android:minHeight="@dimen/caption_text_height"
+            android:maxLength="3"
+            android:ellipsize="end"/>
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:background="#F0FFFFFF"
+            android:layout_height="@dimen/holder_min_height">
+
+            <com.makeramen.RoundedImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/imageView1"
+                android:layout_weight="0"
+                android:scaleType="fitCenter"
+                app:riv_corner_radius="30dip"
+                app:riv_border_width="2dip"
+                app:riv_border_color="#333333"
+                app:riv_mutate_background="true"
+                app:riv_tile_mode="repeat"
+                app:riv_oval="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="User Name"
+                android:id="@+id/tvUsername"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/dark_blue"
+                android:minHeight="@dimen/holder_min_height"
+                android:textSize="@dimen/holder_text_size"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:text="now"
+                android:id="@+id/tvUpdateTime"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:minHeight="@dimen/holder_min_height"
+                android:textColor="@android:color/darker_gray"
+                android:shadowColor="@android:color/black"
+                android:textSize="@dimen/created_time_holder_text_size"/>
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_gravity="left|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="@dimen/likes_image_height"-->
+            <!--android:layout_weight="0"-->
+            <!--android:layout_gravity="left"-->
+            <!--android:minHeight="@dimen/likes_image_height"-->
+            <!--android:src="@drawable/likes_img"/>-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/created_time_holder_text_size"
+                android:textColor="@color/dark_blue"
+                android:id="@+id/tvLikesCount" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@android:color/darker_gray"
+            android:shadowColor="@android:color/black"
+            android:textSize="@dimen/created_time_holder_text_size"
+            android:id="@+id/tvComments"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/created_time_holder_text_size"
+                android:textColor="@color/dark_blue"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="left"
+                android:id="@+id/tvcommentUsername1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/created_time_holder_text_size"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@android:color/black"
+                android:layout_gravity="right|center_vertical"
+                android:gravity="left"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:id="@+id/tvCommentText1"/>
+            </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/created_time_holder_text_size"
+                android:textColor="@color/dark_blue"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="left"
+                android:id="@+id/tvcommentUsername2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/created_time_holder_text_size"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@android:color/black"
+                android:layout_gravity="right|center_vertical"
+                android:gravity="left"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:id="@+id/tvCommentText2"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
